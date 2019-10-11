@@ -4,18 +4,26 @@ export const FETCHING_FISHES_START = "FETCHING_FISHES_START";
 export const FETCHING_FISHES_SUCCESS = "FETCHING_FISHES_SUCCESS";
 export const FETCHING_FISHES_FAILURE = "FETCHING_FISHES_FAILURE";
 
-export const getFishes = state => dispatch => {
+export const getFishes = () => dispatch => {
   dispatch({ type: FETCHING_FISHES_START });
   axios
-    .get("http://hotline.whalemuseum.org/api.json")
+    .get("http://hotline.whalemuseum.org/api.json?species=orca")
     .then(res => {
-      console.log("see this response", res);
-      dispatch({ type: FETCHING_FISHES_SUCCESS, payload: res.data.data });
+      console.log("Action Res", res.data);
+      dispatch({ type: FETCHING_FISHES_SUCCESS, payload: res.data });
     })
     .catch(err => {
       dispatch({
         type: FETCHING_FISHES_FAILURE,
-        payload: `${err.response.message} code: ${err.response.code}`
+        payload: err.response
       });
     });
 };
+
+// const thunk = next => action => store => {
+//   if (typeof action === 'object' {
+//     next(action)
+//   } else if (typeof action === 'function' {
+//     action(store.dispatch)
+//   }
+// }

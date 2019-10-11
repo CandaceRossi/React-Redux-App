@@ -4,7 +4,7 @@ import Fishes from "./components/Fishes";
 function App() {
   return (
     <div className="App">
-      <h1>Whale Sightings Graph</h1>
+      <h1>Whale Sightings </h1>
       <Fishes />
     </div>
   );
