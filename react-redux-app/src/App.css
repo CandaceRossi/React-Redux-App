@@ -1,0 +1,74 @@
+        .App {
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .App-logo {
+            animation: App-logo-spin infinite 20s linear;
+            height: 40vmin;
+            pointer-events: none;
+        }
+        
+        .App-header {
+            background-color: #282c34;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(10px + 2vmin);
+            color: white;
+        }
+        
+        .App-link {
+            color: #61dafb;
+        }
+        
+        @keyframes App-logo-spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .fish-style {
+            width: 100%;
+            background-image: linear-gradient(rgb(200, 222, 243), white);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .fish-button {
+            font-size: 1rem;
+            padding: 10px;
+            background: white;
+            box-shadow: none;
+            border: 1px solid slategray;
+        }
+        
+        .fish-button:hover {
+            box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+        }
+        
+        .whale-style {
+            width: 25%;
+            border: 2px solid rgb(75, 75, 131);
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        /* .whale-style {
+            z-index: 2;
+            position: absolute;
+            top: 75px;
+        } */
